@@ -7,10 +7,13 @@ import 'package:flutter/material.dart';
 import 'course.dart';
 import 'shapes.dart';
 import 'ui.dart';
+import 'package:winter_core/winter_core.dart';
 
-void main() {
+void main() => runWinterApp(repo: 'draw-school', appName: 'Уроки рисования', body: _main);
+
+void _main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const DrawSchoolApp());
+  runApp(WinterCrashBanner(child: const DrawSchoolApp()));
 }
 
 const _orange = Color(0xFFFFAA5A);
